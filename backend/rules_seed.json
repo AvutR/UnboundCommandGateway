@@ -1,0 +1,33 @@
+[
+  {
+    "priority": 1,
+    "pattern": ":(){ :|:& };:",
+    "action": "AUTO_REJECT",
+    "description": "Reject fork bomb pattern"
+  },
+  {
+    "priority": 2,
+    "pattern": "rm\\s+-rf\\s+/",
+    "action": "AUTO_REJECT",
+    "description": "Reject dangerous rm -rf / commands"
+  },
+  {
+    "priority": 3,
+    "pattern": "mkfs\\.",
+    "action": "AUTO_REJECT",
+    "description": "Reject mkfs commands (disk formatting)"
+  },
+  {
+    "priority": 4,
+    "pattern": "git\\s+(status|log|diff)",
+    "action": "AUTO_ACCEPT",
+    "description": "Auto-accept safe git commands"
+  },
+  {
+    "priority": 5,
+    "pattern": "^(ls|cat|pwd|echo)",
+    "action": "AUTO_ACCEPT",
+    "description": "Auto-accept safe read-only commands"
+  }
+]
+

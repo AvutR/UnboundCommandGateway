@@ -1,0 +1,2 @@
+"""Command Gateway application package."""
+
